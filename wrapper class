@@ -1,0 +1,17 @@
+public class Example
+{
+ public static void main(string[] args)
+ {
+   Integer i1 = Integer.valueOf("123"); //vaueOf() function is a static method ,
+					//it take values in string ,we can also find("11010",2) Binary numbers by this 
+   					//it returns Object reference ,thats why
+					//their is Integer i1 , not int i1.
+   Double d1 = Double.valueOf("3.14"); 
+   
+   int a = Integer.parseInt("123");	//this is also a static method function(only takes static values)
+					//it returns in object only.
+   
+   int c = i1.intValue();		//its an instance method so we can create objects to store its value.
+ }
+
+}
