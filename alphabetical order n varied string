@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static String getSmallestAndLargest(String s, int k) {
+        String smallest ="";
+        String largest = "";
+        String sub_string[] = new String[s.length()-k+1];
+        // Complete the function
+        // 'smallest' must be the lexicographically smallest substring of length 'k'
+        // 'largest' must be the lexicographically largest substring of length 'k'
+
+        for(int i=0;i<s.length()-k-1;i++)
+        {
+        sub_string[i]=s.substring(i,k+i);    
+        System.out.println(sub_string[i]);
+        }
+        int min = 0;
+        String temp="";
+        for(int i=0;i<s.length()-1;i++)
+        {
+            min=i;
+            for(int j=i+1;j<s.length();j++)
+            {
+               // System.out.println(sub_string[j].compareTo(sub_string[min]));
+               if(sub_string[j].compareTo(sub_string[min])<0)
+                {
+                    temp=sub_string[j];
+                    sub_string[j]=sub_string[min];
+                    sub_string[min]=temp;
+                }
+                
+            }
+        }
+
+        smallest = sub_string[0];
+        largest = sub_string[s.length()-1];
+        
+        return smallest + "\n" + largest;
+    }
+
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.next();
+        int k = scan.nextInt();
+        scan.close();
+      
+        System.out.println(getSmallestAndLargest(s, k));
+    }
+}
