@@ -1,0 +1,32 @@
+import java.util.*;
+import java.io.*;
+
+public class Solution
+{
+    public static void main(String[] args) {
+        
+        Scanner in = new Scanner(System.in);
+        int count = 0;
+        String A = in.next();
+        int n=A.length();
+    //    char[] array = A.toCharArray();
+        
+    //    for(char ch : array )
+    //    System.out.println(ch);
+        int i , j;
+        for(i=0 , j = n-1 ;i<n/2 && j>n/2 ; )
+        {
+            if(A.charAt(i) == A.charAt(j))
+            count++;
+            i++;
+            j--;
+        }
+    
+
+        if(count==n/2)
+        System.out.println("Yes");
+
+        else
+        System.out.println("No");
+    }
+}
