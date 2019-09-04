@@ -1,0 +1,55 @@
+import java.io.*;
+import java.util.*;
+class Worker
+{
+    Scanner in = new Scanner(System.in);
+    
+  public int getname()
+  {
+    System.out.println("enter name");
+    String A = in.Line();
+  }
+  public int salaryrate()
+  {
+    System.out.println("enter salary rate");
+    int i = in.Int();
+  }
+    
+}
+
+class DailyWorker extends Worker
+{
+    public int getdays()
+    {
+        System.out.println("enter total no. of days worker worked");
+        int days = in.Int();
+        System.out.println(i*days);
+    }
+}
+
+
+class SalariedWorker extends Worker
+{
+    public int getweeks()
+    {
+        System.out.println("enter total no. of weeks worker worked");
+        int weeks = in.Int();
+        System.out.println(i*weeks*40);
+    }
+}
+
+
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		
+		Worker obj = new Worker();
+		DailyWorker obj2 = new DailyWorker();
+		SalariedWorker obj3 = new SalariedWorker();
+		
+		obj2.getname();
+		obj3.salaryrate();
+		obj.getdays();
+	}
+}
