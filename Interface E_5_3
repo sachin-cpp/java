@@ -1,0 +1,24 @@
+import java.io.* ;
+
+interface A 
+{
+    public int x = 3 , y =4;
+    public int mul(int a, int b);
+}
+
+class B implements  A 
+{
+    public int mul(int x , int y)
+    {
+        return(x*y);
+    }
+}
+
+class Main extends B 
+{
+    public static void main (String[] args) {
+        B obj = new B() ;
+        System.out.println("sdd" + obj.mul(2 ,y) );
+    }
+
+}
