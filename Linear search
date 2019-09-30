@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Enter no of values you want to insert");
+		Scanner sc = new Scanner(System.in);
+		
+		//int[] A = new int[]{12,43,45,65,76,87};
+		
+		int n = sc.nextInt();
+		System.out.println("Enter the values");
+		int[] A = new int[n];
+		for(int i=0;i<n;i++)
+		{
+		     A[i]= sc.nextInt();
+		}
+		
+		
+		System.out.println("enter no you want to search");
+		int val = sc.nextInt();
+		
+		for(int i=0;i<n;i++)
+		{
+		    if(A[i] == val)
+		    {
+		        System.out.println("founded at index"+ i);
+		    }
+		   
+		}
+	}
+}
