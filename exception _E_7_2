@@ -1,0 +1,22 @@
+import java.util.* ;
+public class Main
+{
+    
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+	
+	    Scanner sc = new Scanner(System.in);
+	    
+	    int x = new sc.nextInt();
+	    
+	    int y = new sc.nextInt();
+	    try
+	    {
+	    System.out.println(x/y);
+	    }
+	    catch(Exception e){
+	        System.out.println("caught");
+	    
+	    }
+	}
+}
