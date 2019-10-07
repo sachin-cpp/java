@@ -1,0 +1,29 @@
+import java.util.* ;
+public class Main
+{
+
+  public static void main (String[]args)
+  {
+    System.out.println ("Hello World");
+
+    
+    Scanner in = new Scanner(System.in);
+    
+    try
+    {
+    System.out.println("Enter two operands");
+    int x =  in.nextInt();
+    int y = in.nextInt();
+    
+    int z = x+y ;
+    
+    System.out.println(z);
+    }
+    catch(Exception e)
+    {
+        System.out.println("Exception caught");
+    }
+  }
+
+
+}
