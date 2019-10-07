@@ -1,0 +1,25 @@
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		int x=60;
+		try
+		{
+		    if(x>50)
+		    {
+		    throw new MyException(x);
+		    }
+		}
+		catch(Exception e)
+		{
+		   // System.out.println("Exception is " + e);
+		}
+	}
+}
+class MyException extends Exception
+{
+    MyException (int b)
+    {
+        System.out.println("Exception is due to age " + b);
+    }
+}
